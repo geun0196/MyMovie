@@ -7,29 +7,32 @@
 
 import SwiftUI
 
-// HTTP 통신할 때는 Target - 프로젝트 이름 클릭 후
-// info 탭에서 App Transport Security Settings 하위의 Allow Arbitrary Loads를 Yes로 바꿔야한다
-// 이유 : 애플이 HTTP의 보안이 약해서 막고 있기 떄문에 바꿔줘야 한다
-
 struct ContentView: View {
-    var body: some View {
-        SampleMovie()
+    @State private var selection = "영화 목록 보기"
+    var body: some View{
+        TabView(selection: $selection){
+            MovieView()
+                .tag("영화 목록 보기")
+                .tabItem {
+                    Text("영화")
+                    Image(systemName: "display")
+                }
+            ActorView()
+                .tag("배우 목록 보기")
+                .tabItem {
+                    Text("배우")
+                    Image(systemName: "person.2")
+                }
+        }.font(.headline)
     }
 }
 
-// Codable : Encodable & Decodable 나눠진다
-// Encodable : 구조체를 문자열로 만들어주는 역할
-// Decodable : 문자열을 구조체로 만들어주는 역할
-// Json파일도 보기편하게 되어 있지만 사실은 문자열로 받아온다
-// 받아온 문자열을 보기 편하게 파싱 "" { 만나면 "키" : value로 보기 쉽게 변환 함"" 역할을 해주는게 Encodable이다
-struct Movie: Codable, Hashable {
-    let title: String
-    let image: String
-}
+/**
+ {
+ "message": "success","paging": {"total": 28,"skip": 0,"limit": 10
+ },"data": [{"genre": ["드라마","로맨스","스릴러","액션"],"_id": "631f93832d06ff4e337e64b9","title": "오징어 게임","image": "/poster/1663013763153.jpeg"}]}
+ */
 
-struct MovieResponse: Codable {
-    let data: [Movie]
-}
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

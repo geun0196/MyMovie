@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F788AED299A5DA8005D7166 /* MovieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F788AEC299A5DA8005D7166 /* MovieView.swift */; };
+		4F788AEF299A5DEB005D7166 /* ActorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F788AEE299A5DEB005D7166 /* ActorView.swift */; };
 		4F7DD5AB298AB25600A9D33A /* iMovieApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7DD5AA298AB25600A9D33A /* iMovieApp.swift */; };
 		4F7DD5AD298AB25600A9D33A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F7DD5AC298AB25600A9D33A /* ContentView.swift */; };
 		4F7DD5AF298AB25800A9D33A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F7DD5AE298AB25800A9D33A /* Assets.xcassets */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4F788AEC299A5DA8005D7166 /* MovieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieView.swift; sourceTree = "<group>"; };
+		4F788AEE299A5DEB005D7166 /* ActorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActorView.swift; sourceTree = "<group>"; };
 		4F7DD5A7298AB25600A9D33A /* iMovie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iMovie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F7DD5AA298AB25600A9D33A /* iMovieApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iMovieApp.swift; sourceTree = "<group>"; };
 		4F7DD5AC298AB25600A9D33A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -57,6 +61,8 @@
 				4F7DD5BA298AC0E300A9D33A /* Info.plist */,
 				4F7DD5AA298AB25600A9D33A /* iMovieApp.swift */,
 				4F7DD5AC298AB25600A9D33A /* ContentView.swift */,
+				4F788AEC299A5DA8005D7166 /* MovieView.swift */,
+				4F788AEE299A5DEB005D7166 /* ActorView.swift */,
 				4F7DD5AE298AB25800A9D33A /* Assets.xcassets */,
 				4F7DD5B0298AB25800A9D33A /* Preview Content */,
 			);
@@ -143,8 +149,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F7DD5B9298AB28F00A9D33A /* SampleMovie.swift in Sources */,
+				4F788AED299A5DA8005D7166 /* MovieView.swift in Sources */,
 				4F7DD5AD298AB25600A9D33A /* ContentView.swift in Sources */,
 				4F7DD5AB298AB25600A9D33A /* iMovieApp.swift in Sources */,
+				4F788AEF299A5DEB005D7166 /* ActorView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
